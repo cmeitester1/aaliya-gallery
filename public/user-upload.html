@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <!--<link href="./css/all.css" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='./css/style.css' />
+    <title>Aaliya's Art Gallery</title>
+</head>
+
+<body>
+
+
+    <div class="header-page">
+        <a class="header-title" id="register-label" href="index.html">Aaliya's Art Gallery</a>
+    </div>
+
+    <div class="wrapper">
+        <div class="non-forms-page-main">
+            <h2>Upload/Update Images & Information </h2>
+            <!-- <h3 style="display:none" id="msg-no-images msg-images-allowed">You haven't uploded any artwork yet. Start today. It's absolutley free!!! You can upload images for 5 artworks</h3> -->
+            <h3 style="display:none" id="msg-images-allowed-1">You haven't uploded any artwork yet. Start today. It's absolutley free!!!</h3>
+            <h3 id="msg-images-allowed-2"></h3>
+            <div class="user-images" id="user-images"></div>
+            <div class="btn-main-page">
+                <button id="btn-add-new-painting">Add another artwork</button>
+                <button id="btn-done">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <script id="msg-images-allowed-template" type="text/html">
+    <!--Script to dynamically change the message telling the user how many images can they upload -->
+            You can upload images for upto {{img_allowed}} artworks
+    </script>
+
+    <script id="user-image-template" type="text/html">
+    <!-- Even though we are using script tags, this is not an actual JS script, but is more like a defacto technique for including templates in a page. Normally script tags block all processing when rendering a page. But here the template has a type="text/html", which effectively tricks the browser into not processing it like a normal JavaScript block -->
+        <div class="user-image-info">
+            <p style="display:none">{{img_name}}</p>
+            <p style="display:none">{{img_year}}</p>
+            <p style="display:none">{{img_grade}}</p>
+            <p style="display:none">{{img_height}}</p>
+            <p style="display:none">{{img_width}}</p>
+            <p style="display:none">{{img_depth}}</p>
+            <p style="display:none">{{img_type}}</p>
+            <p style="display:none">{{img_orientation}}</p>
+            <p style="display:none">{{img_price}}</p>
+            <p style="display:none">{{img_version}}</p> <!-- All these fields where display is none -->
+            <p class="image-title">{{img_title}}</p>
+            <img class="thumbnail-img" src={{img_src}}>
+            <div class="btn-list">
+                <button class="btn-update-image-info" >Update</button>
+                <button class="btn-delete-image">Delete</button>
+                <h4 style="display:none" id="msg-deleting-image-{{img_name}}"></h4>
+            </div>
+        </div>
+
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/user-upload.js"></script>
+
+</body>
+
+</html>

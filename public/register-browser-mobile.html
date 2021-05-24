@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <link href="./css/all.css" rel="stylesheet">
+    <link rel='stylesheet' href='./css/style.css' />
+    <link rel='stylesheet' href='./css/style-forms.css' />
+    <link rel='stylesheet' href='./css/style-media-forms.css' />
+</head>
+
+<body>
+    <div class="centered-form centered-form-mobile">
+        <div class="centered-form__box centered-form-mobile__box" id="register-browser-mobile">
+                <div class="img__back--close--container">
+                    <button id="btn-close-register">
+                            <i class="fa fa-times-circle" title="Close Form"></i>
+                    </button>
+                </div>
+            
+            
+            <form id="register-browser-mobile-form" method="POST" action="users" autocomplete="off" autocorrect="off" spellcheck="false">
+                <label for="name" id="label-name-browser-mobile">Name</label>
+                <input type="text" name="name" id="name-browser-mobile" placeholder="Name" autofocus />
+                <p class="error-msg" id="error-register-browser-mobile-name"></p>
+                
+                <label for="email" id="label-email-browser-mobile">Email</label>
+                <input type="text" autocorrect="off" autocapitalize="none" autocomplete="off" spellcheck="false" name="email" id="email-browser-mobile" placeholder="Email" />
+                <p class="error-msg" id="error-register-browser-mobile-email"></p>
+                
+                <label for="loginid" id="label-loginid-browser-mobile">Login Id</label>
+                <input type="text" autocorrect="off" autocapitalize="none" autocomplete="off" spellcheck="false" name="loginid" id="loginid-browser-mobile" placeholder="Login Id" />
+                <p class="error-msg" id="error-register-browser-mobile-loginid"></p>
+                
+                <label for="password" id="label-password-browser-mobile">Password</label>
+                <input type="password" autocorrect="off" autocapitalize="none" autocomplete="off" name="password" id="password-browser-mobile" placeholder="Password(min 7 char)" />
+                <p class="error-msg" id="error-register-browser-mobile-password"></p>           
+
+		<input type="hidden" id="artist" name="artist" value=false />
+                
+                    
+                <button class="btn-previous" type="button" id="btn-previous-register-browser-mobile">< Previous</button>                    
+                <button class="btn-next" type="button" id="btn-next-register-browser-mobile">Next ></button>          
+                <button type="submit" id="btn-submit-register-browser-mobile">Create a new account</button>
+            </form>           
+            
+            <p class="error-msg" id="error-register"></p>
+
+
+        </div>
+        
+       <div class="centered-form__box centered-form-mobile__box" id="resend-email">
+                <div class="img__back--close--container">
+                    <button id="btn-close-resend-email">
+                            <i class="fa fa-times-circle" title="Close Form"></i>
+                    </button>
+                </div>
+                    
+                <p id="email-confirm"></p>
+                <p id="email-confirm-resend"></p>                        
+                <button id="btn-resend-email">Resend Email</button>
+                
+        </div>
+        
+    </div>
+
+    <script src="./js/common.js"></script>
+    <script src="./js/register-browser-mobile.js"></script>
+
+</body>
+
+
+
+</html>

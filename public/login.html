@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <!--<link href="./css/all.css" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap" rel="stylesheet"> 
+    <link rel='stylesheet' href='./css/style.css' />
+</head>
+
+<body>
+    
+    <div class="header-page">
+        <a class="header-title" id="register-label" href="index.html">Aaliya's Art Gallery</a>
+    </div>
+
+    <div class="forms-page">
+
+        <form id="login-form" method="POST" action="users/login" autocomplete="off">
+
+            <div class="form-component">
+                <button type="button" class="btn-close-form" id="btn-close-login-form">
+                    <i class="fa fa-times-circle" title="Close Form"></i>
+                </button>
+            </div>
+
+            <div class="form-component">
+                <h2>Welcome Back</h2>
+            </div>
+
+            <!-- Removing social media login for right now
+            <div class="social--auth">
+                <div class="amazon"><i class="fa-border fa fa-amazon fa-lg"></i></div>
+                <div class="facebook"><i class="fa-border fa fa-facebook fa-lg"></i></div>
+                <div class="google"><i class="fa-border fa fa-google fa-lg"></i></div>
+            </div>
+            -->
+
+            <div class="form-component">
+                <label for="email">Email</label>
+                <input type="text" autocorrect="off" autocapitalize="none" autocomplete="off" spellcheck="false" name="email" id="email" autofocus />
+            </div>
+
+            <div class="form-component">
+                <label for="password">Password</label>
+                <input type="password" autocorrect="off" autocapitalize="none" autocomplete="off" spellcheck="false" name="password" id="password" />
+            </div>
+
+
+            <div class="form-component">
+                <p class="error-msg" id="error-login"></p>
+                <a id="password-reset-link" href="reset-password-email.html">Forgot Password?</a>
+            </div>
+
+            <div class="form-component">
+                <button type="submit" class="btn-submit-form" >Log in</button>
+            </div>
+
+
+        </form>
+
+
+        <div id="confirm-email-page">
+
+            <div class="form-component">
+                <button type="button" id="btn-close-confirm-email-form">
+                    <i class="fa fa-times-circle" title="Close Form"></i>
+                </button>
+            </div>
+
+
+            <div class="form-component">
+                <p class="error-msg" id="confirmation-email"></p>
+            </div>
+
+            <div class="form-component">
+                <p class="error-msg" id="login-resend-email"></p>
+            </div>
+
+            <div class="form-component">
+                <button id="btn-login-resend-email" type="button">Resend Email</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="./js/login.js"></script>
+
+
+</body>
+
+
+
+</html>

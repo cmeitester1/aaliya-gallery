@@ -1,0 +1,358 @@
+// HEADER
+
+.header {
+    background-color: lightblue;
+    color: black;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+}
+
+.header h1 {
+    font-family: 'Yellowtail', cursive;    
+    font-size: 2.7rem;
+    padding: 0;
+    text-align: center;
+    flex: 1;
+    
+    @media only screen and (min-width: $bp-smallest)  {
+        font-size: 3.5rem;
+        margin-left: 5rem;
+    }
+    
+    @media only screen and (min-width: $bp-small)  {
+        font-size: 4rem;
+        margin-left: 3rem;
+    }
+    
+    @media only screen and (min-width: $bp-medium)  {
+        font-size: 4.5rem;
+        margin-left: 20rem;
+    }
+}
+
+#logging {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 1rem;
+    font-size: 1.8rem;
+}
+
+#logging h4 {
+    margin: .5rem 1rem;
+}
+
+#logging a {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    margin: 0 .5rem;
+    text-decoration: none;
+}
+
+#logging .fa {
+/* This is the increase the clickable area of the message button */
+	font-size: 2.5rem;
+	padding: 0.5rem;
+}
+
+#logging a:link{
+    color: black;
+}
+
+#logging a:visited{
+    color: black;
+}
+
+#logout-btn {
+    border: none;
+    background-color: lightblue;
+    margin: 0 .5rem;
+    display: none; /* hide till the user is authenticated */
+    cursor: pointer;
+}
+
+#logging i {
+    margin: 0 1rem;
+}
+
+// END OF HEADER
+
+
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    top: 10%;
+    width: 100%; // made this change becuase if only one artwork, it doesnt align correctly on smaller screens
+    
+    @media only screen and (min-width: $bp-small) {
+        justify-content: space-between;
+    }
+}
+
+.image {
+    perspective: 100rem;
+    position: relative;
+    
+    width: 90vw;
+    height: 90vw;
+    
+    @media only screen and (min-width: $bp-small) and (max-width: $bp-largest) {
+        width: 48vw;
+        height: 48vw;
+    }
+    
+    @media only screen and (min-width: $bp-largest) {
+        width: 390px;
+        height: 390px;
+    }
+}
+
+
+.img {
+    width: 95%;
+    height: 80%;
+    margin: 1rem 1rem 0 1rem;
+    //border: .3rem solid silver;
+    //outline: .3rem solid gold;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 2%;
+
+}
+
+
+/* Image stats */
+.img__stats {
+    width: calc(95% - .3rem);
+    height: calc(20% - 1.3rem);
+    padding-top: 0.5rem;
+    display: flex;
+            align-items: flex-start;
+    margin: 0 1rem;
+            justify-content: space-between;
+    position:absolute;
+    top: calc(80% + 1.3rem);
+    left: 0;
+    color: #6c6b6b;
+    font-size: 1.8rem;
+}
+
+.img__stats h4 {
+    font-size: 1.75rem;
+    padding-left: 1rem;    
+}
+    
+.img__stats h5 {
+    font-size: 2rem;
+    //padding-top: 1rem;
+    
+    @media only screen and (min-width: $bp-small) and (max-width: $bp-medium) {
+        font-size: 1.5rem;
+        //padding-top: .3rem;
+    }
+}
+    
+
+.likes {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.total-likes {
+    padding-left: .5rem;
+}
+
+.btn-info, .btn-thumbs-up, .btn-close-information {
+    width: 4rem;
+    background-color: #fff;
+    border: none;
+    padding-right: .5rem;
+    
+    @media only screen and (min-width: $bp-small) and (max-width: $bp-medium) {
+        width: 3rem;
+    }
+    
+    @media only screen and (min-width: $bp-medium) {
+        width: 4rem;
+    }
+}
+
+.btn-info:focus, .btn-thumbs-up:focus, .btn-close-information:focus {
+    outline: 0;
+}
+
+.fa-thumbs-up, .fa-info, .fa-arrow-circle-left {
+    font-size: 2.5rem;
+    
+    @media only screen and (min-width: $bp-small) and (max-width: $bp-medium) {
+        font-size: 2.5rem;
+    }
+    
+    @media only screen and (min-width: $bp-medium) {
+        font-size: 2.5rem;
+    }
+}   
+
+.fa-thumbs-up:hover, .fa-info:hover, .fa-arrow-circle-left:hover {
+    cursor: pointer
+}
+
+.likes__error--message {
+    width: calc(95% - .3rem);
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    position:absolute;
+    top: calc(100% - 3rem);
+    left: 0;
+    color: red;
+    font-size: 1.2rem;
+    
+    @media only screen and (min-width: $bp-small) and (max-width: $bp-medium) {
+        top: calc(100% - 1.5rem);
+    }
+    
+    @media only screen and (max-width: $bp-small) {
+        top: calc(100% - 6rem);
+        font-size: 1.5rem;
+    }
+}
+
+/* backside of the image */
+
+.img__info {
+    margin: 10% 0 0 0;
+}
+.img__info h2 {
+    text-align: center;
+    padding: .3rem 0;
+    margin: .3rem 0;
+    font-size: 1.8rem;
+}
+.img__back {
+    background-color: mintcream;
+    background-image: url('https://aaliya-gallery.s3-us-west-2.amazonaws.com/common/bg.jpg');
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+}
+
+.img__s3locationbig {
+// This attribute is only used to save the S3 location of the bigger version
+    display: none;
+}
+
+
+.img-window {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.img-window img{
+    max-width: 80vw;
+    max-height: 80vh;
+
+    @media only screen and (max-width: $bp-small) {
+        max-width: 90vw;
+        max-height: 80vh;
+        align-self: start;
+        margin-top: 2vh;
+    }
+}
+
+.img-btn-next,
+.img-btn-prev {
+    //display: block;
+    //padding: 6px 10px;
+    border-radius: 4px;
+    background-color: blue;
+    position: fixed;
+    top: 92vh;
+    z-index: 500;
+    color: #ffffff;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+
+    @media only screen and (max-width: $bp-small) {
+        top: 85vh;
+    }
+}
+
+.img-btn-next {
+    right: 5vw;
+}
+
+.img-btn-prev {
+    left: 5vw;
+}
+
+.img-btn-next:hover,
+.img-btn-prev:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.img__back--close--container {
+    padding:0px;
+    margin:0px;
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: end;
+            justify-content: flex-end;
+}
+
+.fa-arrow-circle-left {
+
+    color: black;
+    cursor: pointer;
+    font-size: 1.8rem;
+    padding-left: 1rem;
+    margin: 0px;
+}
+
+*/

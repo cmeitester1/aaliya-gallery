@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <!--<link href="./css/all.css" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='./css/style.css' />
+</head>
+
+<body>
+
+    <div class="header-page">
+        <a class="header-title" id="register-label" href="index.html">Aaliya's Art Gallery</a>
+    </div>
+
+    <div class="forms-page">
+
+        <form id="register-browser-form" method="POST" action="users" autocomplete="off">
+
+            <div class="form-component">
+                <button type="button" class="btn-close-form" id="btn-close-register-browser-form">
+                    <i class="fa fa-times-circle" title="Close Form"></i>
+                </button>
+            </div>
+
+            <div class="form-component">
+                <h2>Register as a browser/buyer</h2>
+                <h4>(All fields required)</h4>
+            </div>
+
+            <div class="form-component-two">
+                <div class="form-component-two__first">
+                    <label for="firstname"> First Name</label>
+                    <input type="text" autocorrect="off" spellcheck="false" name="firstname" id="firstname-browser" autofocus/>
+                    <p class="forms-error-msg" id="forms-error-firstname-browser"></p>
+                </div>
+                <div class="form-component-two__second">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" autocorrect="off" spellcheck="false" name="lastname" id="lastname-browser" autofocus/>
+                    <p class="forms-error-msg" id="forms-error-lastname-browser"></p>
+                </div>
+            </div>
+            
+
+            <div class="form-component">
+                <label for="email">Email</label>
+                <input type="text" autocorrect="off" autocapitalize="none" spellcheck="false" name="email" id="email-browser" onBlur="emailBrowserPostFocus()" />
+                <p class="forms-error-msg" id="forms-error-email-browser"></p>
+            </div>
+
+            <div class="form-component">
+                <label for="password">Password</label>
+                <input type="password" autocorrect="off" autocapitalize="none" name="password" id="password-browser" onBlur="passwordBrowserPostFocus()" placeholder="Min 7 characters" />
+                <p class="forms-error-msg" id="forms-error-password-browser"></p>
+            </div>
+            
+            <div class="form-component">
+                <label for="confirm-password-browser">Confirm Password</label>
+                <input type="password" autocorrect="off" autocapitalize="none" autocomplete="off" spellcheck="false" id="confirm-password-browser"  />
+                <p class="forms-error-msg" id="forms-error-confirm-password-browser"></p>
+            </div>
+
+            <input type="hidden" id="artist" name="artist" value=false />
+
+            <div class="form-component">
+                <button type="submit" class="btn-submit-form">Create a new account</button>
+            </div>
+
+        </form>
+
+        <div class="register-complete-page" id="register-browser-complete-page">
+
+            <div class="form-component">
+                <button type="button" class="btn-close-form" id="btn-close-resend-email-form">
+                    <i class="fa fa-times-circle" title="Close Form"></i>
+                </button>
+            </div>
+
+            <div class="form-component">
+                <p id="email-confirm"></p>
+            </div>
+
+            <div class="form-component">
+                <p id="email-confirm-resend"></p>
+            </div>
+
+            <div class="form-component">
+                <button type="submit" class="btn-submit-form" id="btn-resend-email">Resend Email</button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="./js/common.js"></script>
+    <script src="./js/register-browser.js"></script>
+
+</body>
+
+</html>

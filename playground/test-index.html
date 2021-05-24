@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="value">0</div>
+    <button id="add">Add</button>
+    <a href="test-login.html">login</a>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+    <script>
+        
+        const {username} = Qs.parse(location.search, {ignoreQueryPrefix: true});
+        
+        console.log(username);
+        
+        if (username) {
+            document.getElementById('value').textContent += 1;
+        }
+        
+        document.getElementById('add').addEventListener("click", ()=> {
+            document.getElementById('value').textContent += 1;
+           
+        })    
+    </script>
+
+
+</body>
+
+
+
+</html>

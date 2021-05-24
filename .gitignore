@@ -1,0 +1,7 @@
+node_modules
+*.bak.css
+*.swp
+nohup.out
+public/css/style.comp.css
+public/css/style.concat.css
+public/css/style.prefix.css

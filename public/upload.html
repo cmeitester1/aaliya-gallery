@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <!--<link href="./css/all.css" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='./css/style.css' />
+</head>
+
+<body>
+    
+    <script src="./js/common.js"></script>
+
+    <div class="header-page">
+        <a class="header-title" id="register-label" href="index.html">Aaliya's Art Gallery</a>
+    </div>
+
+    <div class="forms-page">
+
+
+        <form id="upload-image-form">
+
+            <div class="form-component">
+                <button type="button" class="btn-close-form" id="btn-close-upload-image-form">
+                    <i class="fa fa-times-circle" title="Close Form"></i>
+                </button>
+            </div>
+
+            <div class="form-component">
+                <h2>Upload Art Image&Info</h2>
+            </div>
+
+            <div class="form-component">
+                <label class="forms-label">Choose a file</label>
+                <input type="file" name="file" id="file-upload">
+                <p class="forms-error-msg" id="forms-error-file-upload"></p>
+            </div>
+
+            <div class="form-component">
+                <label class="forms-label">Artwork Title</label>
+                <input type="text" name="title" id="title-upload">
+                <p class="forms-error-msg" id="forms-error-title-upload"></p>
+            </div>
+
+            <div class="form-component">
+                <label class="forms-label">Year Created</label>
+                <input type="number" name="year" id="year-upload" value=2020 step=1>
+                <p class="forms-error-msg" id="forms-error-year-upload"></p>
+            </div>
+
+            <div class="form-component">
+                <label class="forms-label">Grade Created</label>
+                <select name="grade" id="grade-upload">
+                    <option>I</option>
+                    <option>II</option>
+                    <option>III</option>
+                    <option>IV</option>
+                    <option>V</option>
+                    <option>VI</option>
+                    <option>VII</option>
+                    <option>VIII</option>
+                    <option>IX</option>
+                    <option>X</option>
+                    <option>XI</option>
+                    <option>XII</option>
+                </select>
+            </div>
+
+            <div class="form-component">
+                <label class="forms-label">Height(inches)</label>
+                <input type="number" name="height" id="height-upload" value=10 step=0.1>
+                <p class="forms-error-msg" id="forms-error-height-upload"></p>
+            </div>
+
+            <div class="form-component">
+                <label class="forms-label">Width(inches)</label>
+                <input type="number" name="width" id="width-upload" value=10 step=0.1>
+                <p class="forms-error-msg" id="forms-error-width-upload"></p>
+            </div>
+
+            <div class="form-component">
+                <label class="forms-label">Depth(inches)</label>
+                <input type="number" name="depth" id="depth-upload" value=2 step=0.1>
+                <p class="forms-error-msg" id="forms-error-depth-upload"></p>
+            </div>
+
+            <div class="form-component">
+                <label class="forms-label">Type</label>
+                <select id="type-upload" name="type">
+                    <option>Acrylic Painting</option>
+                    <option>Gouache Painting</option>
+                    <option>Oil Painting</option>
+                    <option>Watercolor Painting</option>
+                </select>
+                <p class="forms-error-msg" id="forms-error-type-upload"></p>
+            </div>
+            
+            <div class="form-component">
+                <label class="forms-label">Orientation</label>
+                <select id="orientation-upload" name="orientation">
+                    <option>Landscape</option>
+                    <option>Portrait</option>
+                    <option>Square</option>
+                </select>
+                <p class="forms-error-msg" id="forms-error-orientation-upload"></p>
+            </div>
+
+            <div class="form-component">
+                <label class="forms-label">Selling Price(US$)</label>
+                <input type="number" name="price" id="price-upload" step=1>
+                <p class="forms-error-msg" id="forms-error-price-upload"></p>
+            </div>
+
+            <div class="form-component">
+                <button id="file" type="submit" class="btn-submit-form">Update/Upload</button>
+            </div>
+
+        </form>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+    <script src="./js/upload.js"></script>
+
+</body>
+
+
+
+</html>

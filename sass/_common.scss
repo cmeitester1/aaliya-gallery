@@ -1,0 +1,22 @@
+.header-page {
+    background-color: lightblue;
+    color: black;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 9%;    
+    z-index: 10;
+    /*margin: 0 auto; This can be deleted */
+    /*text-align: center;*/
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-title {
+    text-decoration: none;
+    font-size: 4rem;
+    font-family: 'Yellowtail', cursive;
+    color: black;
+}

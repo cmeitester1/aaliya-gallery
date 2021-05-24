@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <!--<link href="./css/all.css" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='./css/style.css' />
+</head>
+
+<body>
+
+    <div class="header-page">
+        <a class="header-title" id="register-label" href="index.html">Aaliya's Art Gallery</a>
+    </div>
+
+    <div class="forms-page">
+
+
+        <form id="message-form" method="POST" action="users/message" autocomplete="off">
+
+            <div class="form-component">
+                <button type="button" class="btn-close-form" id="btn-close-message-form">
+                    <i class="fa fa-times-circle" title="Close Form"></i>
+                </button>
+            </div>
+
+            <div class="form-component">
+                <h2>Send a Message</h2>
+                <h4>(All fields required)</h4>
+            </div>
+
+            <div class="form-component">
+                <label for="name">Name</label>
+                <input type="text" autocorrect="off" autocapitalize="none" autocomplete="off" spellcheck="false" name="name" id="name-message" />
+                <p class="forms-error-msg" id="forms-error-name-message"></p>
+            </div>
+
+            <div class="form-component">
+                <label for="email">Email</label>
+                <input type="text" autocorrect="off" autocapitalize="none" autocomplete="off" spellcheck="false" name="email" id="email-message" onBlur="emailMessagePostFocus()" />
+                <p class="forms-error-msg" id="forms-error-email-message"></p>
+            </div>
+
+            <div class="form-component">
+                <label for="content">Message</label>
+                <textarea spellcheck="false" name="content" id="content-message"></textarea>
+                <p class="forms-error-msg" id="forms-error-content-message"></p>
+            </div>
+
+
+            <div class="form-component">
+                <button type="submit" class="btn-submit-form">Send it!</button>
+            </div>
+
+
+        </form>
+
+    </div>
+
+    <script src="./js/common.js"></script>
+    <script src="./js/message.js"></script>
+
+
+</body>
+
+
+
+</html>

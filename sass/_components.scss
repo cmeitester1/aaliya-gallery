@@ -1,0 +1,336 @@
+/////////////////////////////////////////////////////////////////////////
+//////////////// FORMS PAGES
+
+.forms-page {
+    /*background: #333744;
+    background-color: mintcream; These 2 can be deleted with the background-image */
+    background-image: url('https://aaliya-gallery.s3-us-west-2.amazonaws.com/common/bg.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 9%;
+    width: 100%;
+}
+
+.forms-page form,
+.forms-page .register-complete-page,
+.forms-page #confirm-email-page {
+    border: .1rem solid;
+    width: 35rem;
+    /*margin: auto; This can be deleted */
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    background-color: white;
+    
+    @media only screen and (min-width: $bp-medium) {
+        width: 45rem;
+    }
+}
+
+.forms-page .form-component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1.6rem;
+}
+
+.form-component-two {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 1.6rem;
+    margin-left: auto;
+    margin-right: auto;
+    
+    &__first,
+    &__second {
+        margin-left: 0.7rem;
+    }
+}
+
+.forms-page .form-component h2 {
+    font-size: 2.1rem;
+    text-align: center;
+}
+
+.forms-page .form-component label,
+.form-component-two label {
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333744;
+    padding-left: 0.8rem;
+}
+
+.forms-page .form-component input {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border: .1rem solid lightblue;
+    border-radius: 1rem;
+    padding: 0.7rem;
+    outline: none;
+    font-size: 1.8rem;
+}
+
+.form-component-two input {
+    width: 95%;
+    margin: 0 auto;
+    border: .1rem solid lightblue;
+    border-radius: 1rem;
+    padding: 0.7rem;
+    outline: none;
+    font-size: 1.8rem;
+}
+
+.forms-page .form-component select {
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: .1rem solid lightblue;
+    border-radius: 1rem;
+    padding: 0.7rem;
+    font-size: 1.8rem;
+    outline: none;
+    background-color: white;
+}
+
+.forms-page .form-component textarea {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border: .1rem solid lightblue;
+    border-radius: 1rem;
+    padding: 0.7rem;
+    outline: none;
+    font-size: 1.8rem;
+    resize: none; /*This removes the ability to resize the area on the form */
+}
+
+.forms-page .form-component p {
+    width: 100%;
+    text-align: center;
+    color: red;
+    font-size: 1.6rem;
+    margin-top: .5rem;
+}
+
+.form-component-two p {
+    width: 100%;
+    text-align: center;
+    color: red;
+    font-size: 1.3rem;
+    margin-top: .5rem;
+}
+
+.forms-page input:focus,
+textarea:focus,
+select:focus {
+    background-color: lightblue;
+}
+
+.fa-times-circle {
+    color: black;
+    cursor: pointer;
+    font-size: 2.6rem;
+    margin-right: 1.5rem;
+    margin-top: -0.25rem;
+    opacity: 0.5;
+    
+    @media only screen and (min-width: $bp-medium) {
+        font-size: 3rem;
+        margin-right: 2.2rem;
+    }
+}
+
+.fa-times-circle:hover {
+    cursor: pointer
+}
+
+
+/* Completion page for register forms. Initially hidden */
+.forms-page #register-artist-complete-page,
+.forms-page #register-browser-complete-page {
+    display: none;
+}
+
+.forms-page #confirm-email-page {
+    display: none;
+}
+
+
+//////////////////////////////////////////////////////////////////////////////
+////////////// BUTTONS ON FORMS PAGES
+
+.btn-close-form {
+    width: 9rem;
+    background-color: transparent;
+    margin-right: -4rem;
+    margin-top: -1rem;
+    padding: 1.2rem;
+    margin-left: auto;
+    border: none;
+    cursor: pointer;
+    
+    @media only screen and (min-width: $bp-medium) {
+        margin-right: -4.2rem;
+    }
+    
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn-submit-form {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    cursor: pointer;
+    padding: 1.2rem;
+    background-color: blue;
+    border: none;
+    border-radius: 1rem;
+    color: white;
+    font-size: 1.8rem;
+    
+    &:disabled {
+        color: lightgrey;
+        opacity: 0.3;
+    }
+    
+    &:focus {
+        outline: none;
+    }
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//////////////// NON FORMS PAGE
+
+
+.wrapper {
+    position: absolute;
+    top: 11%;
+    width: 100%;
+}
+
+.non-forms-page-main {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0,0,0,0);    
+}
+
+.non-forms-page-main h2 {
+    font-size: 2.1rem;
+    margin: 5px auto;
+}
+
+.non-forms-page-main h3 {
+    font-size: 1.1rem;
+    margin: 5px auto;
+}
+
+
+/////////////////////////
+// IMAGE INFORMATION
+
+.user-image-info {
+    display: flex;
+    align-items: center;
+	width: 100%;
+    margin: 20px auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: var(--color-grey-light-1);
+}
+
+.image-title,
+.thumbnail-img,
+.btn-list {
+    /*width: 33.33333%;*/
+    flex: 0 0 33.33333%;
+    padding: 1rem;
+    text-align: center;
+}
+
+.image-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    
+    @media only screen and (min-width: $bp-smallest) {
+        font-size: 1.5rem;
+    }
+}
+
+.thumbnail-img {
+    width: 8rem;    
+}
+
+/////////////////////////
+//// NON-FORMS IMAGE BUTTONS
+
+.btn-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-update-image-info,
+.btn-delete-image {
+    width: 60%;
+    text-align: center;
+    padding: 2px;
+    margin: 15px auto;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: rgba(0,0,255,0.2);
+    
+    @media only screen and (min-width: $bp-smallest) {
+        padding: 5px;
+        font-size: 1.5rem;
+    }
+    
+}
+
+
+//////////////////////////////////////////////////////////////////////
+//// NON-FORMS MAIN PAGE BUTTONS
+
+.btn-main-page {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-main-page > button {
+    width: 50%;
+    text-align: center;
+    font-size: 2rem;
+    padding: .3rem;
+    margin: .4rem;
+    background-color: blue;
+    border: none;
+    border-radius: 1rem;
+    color: white; 
+    cursor: pointer;
+}
+
+.btn-main-page > button:disabled {
+    background-color: grey;
+    color: #666666;
+}
+
+
