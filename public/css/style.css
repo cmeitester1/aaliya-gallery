@@ -4588,13 +4588,14 @@ body {
   top: 0;
   left: 0;
   backface-visibility: hidden;
-  border-radius: 2%; }
+  /* border-radius: 2%; */
+ }
 
 /* Image stats */
 .img__stats {
   width: calc(95% - .3rem);
   height: calc(20% - 1.3rem);
-  padding-top: 0.5rem;
+  padding-top: 1.6rem;
   display: flex;
   align-items: flex-start;
   margin: 0 1rem;
@@ -5253,11 +5254,16 @@ select:focus {
 }
 .forms-error-msg {
   color: red !important;
-  font-size: 16px;
+  font-size: medium !important;
+  margin-top:10px;
 }
 input[type='file'] {
   color: transparent;
   width:70px;
+}
+.forgot-password span {
+  color: red !important;
+  font-size: medium !important;
 }
 
 
