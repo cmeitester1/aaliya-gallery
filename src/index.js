@@ -2,6 +2,11 @@ const fs = require('fs');
 const https = require('https');
 const http = require('http');
 const express = require('express');
+const dotenv = require('dotenv');
+
+dotenv.config({ path: './config.env' }); // This will set all the environment variables from config.env
+console.log(process.env.AWSBUCKET);
+
 require('./db/mongoose'); // This will make sure that the entire file runs
 const userRouter = require('./routers/user');
 const likesRouter = require('./routers/likes');
