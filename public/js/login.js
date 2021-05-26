@@ -33,6 +33,8 @@ document.forms['login-form'].addEventListener('submit', async (event) => {
             document.getElementById('confirm-email-page').style.display = "block";
             document.getElementById('confirmation-email').textContent = 'Before your account can be activated, please click on the link sent to your email';
             document.getElementById('login-resend-email').textContent = "If you don't receive the activation email, please click on the 'Resend Email' button"
+            document.getElementById('confirmation-email').style.color = "goldenrod";
+            document.getElementById('login-resend-email').style.color = "goldenrod";
         } else {
             //document.getElementById('error-login').style.display = "block";
             document.getElementById('error-login').textContent = 'Error logging in. Please try again';
