@@ -161,8 +161,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  backface-visibility: hidden;
-  border-radius: 2%; }
+  backface-visibility: hidden; }
 
 /* Image stats */
 .img__stats {
